@@ -1,85 +1,93 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>table</title>
-        <style>
-            .demo{
-                width: 70Px;
-                height: 70px;
-                background-color: blue;
-            }
-            .demo2{
-                width: 70Px;
-                height: 70px;
-                background-color: blueviolet;
-            }
-            #min{
-                display: inline-block;
-            }
-            #sec{
-                display: inline-block;
-            }
-            #hour{
-                display: inline-block;
-            }
-            #duration{
-                display: inline-block;
-            }
-        .items{
-                display: flex;
-                flex-wrap:wrap;
-                flex-direction:column;
-                justify-content:center;
-                align-items:center;
-                
-                
-            }
 
-        </style>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <br>
-        <br>
-        <div class="container items ">
-       <h1>TASK MANAGER</h1>
-       <br>
-       <br>
-      
-        <input type="text" id="i1"  class="form-control" placeholder="task" required/><br><br>
-        <input type="text" id="i2" class="form-control" placeholder="discrption" required/><br>
+<head>
+    <title>Task-maker</title>
+    <style>
+        #min {
+            display: inline-block;
+        }
 
-<div>
-            <h4 id="duration">duration :</h4>
-            <h5 id="hour">00 :</h5>
-            <h5 id="min">00 :</h5>
-            <h5 id="sec">00</h5><br></div><br>
+        #sec {
+            display: inline-block;
+        }
+
+        #hour {
+            display: inline-block;
+        }
+
+        #duration {
+            display: inline-block;
+        }
+
+
+        .items {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @media (max-width: 920px) {
+            .items {
+              
+        
+               flex:none;
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="items">
+        <div>
+            <h1>TASK MANAGER</h1>
+
+
+            <input type="text" id="i1" class="form-control" placeholder="task" required /><br>
+            <input type="text" id="i2" class="form-control" placeholder="discrption" required /><br>
+
+            <div align="center">
+                <h4 id="duration">Duration :</h4>
+                <h5 id="hour">00 :</h5>
+                <h5 id="min">00 :</h5>
+                <h5 id="sec">00</h5><br>
+            </div>
             <br>
-            <button id="b2" class="btn  btn-success">Start Task</button><br>
-     <table  id="ta"  class="table">
-        <thead class="table-dark">
-        <tr>
-            <th>task</th>
-            <th>discription</th>
-            <th>duration</th>
-        </tr>
-        </thead>
-        <tbody>
-      
-    </tbody>
-       
-     </table>
-   
+            <div align="center"> <button id="b2" class="btn  btn-success">Start Task</button></div><br>
+            <table id="ta" class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>task</th>
+                        <th>discription</th>
+                        <th>duration</th>
+                    </tr>
+                </thead>
+                <tbody>
 
- 
-    <!-- <button onclick="stopStopwatch()">Stop</button>
+                </tbody>
+
+            </table>
+
+
+
+            <!-- <button onclick="stopStopwatch()">Stop</button>
     <button onclick="resetStopwatch()">Reset</button> -->
 
-<br>
-<br>
-</div>
+            <br>
+            <br>
+        </div>
+    </div>
 
-<script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
+
 </html>
